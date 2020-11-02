@@ -2,18 +2,21 @@ import pytube
 import os
 import pyfiglet
 import termcolor
+import colorama
 
-from termcolor import colored
+from termcolor import *
 from pytube import YouTube
 from pytube.cli import on_progress
 
+colorama.init()
+
 banner = pyfiglet.figlet_format("YouTube Downloader", font="Slant")
-print(colored(banner, 'magenta'))
-print(colored(':::::::::::::::Developed By Buccioz:::::::::::::::', 'magenta'))
+cprint(banner, 'magenta')
+cprint('\n:::::::::::::::Developed By Buccioz:::::::::::::::', 'magenta')
 
 url = input('\n\nInsert video URL: ')  # Input URL
 
-print(colored('\n720p IS THE ONLY RESOLUTION SUPPORTED', 'red'))
+cprint('\n720p IS THE ONLY RESOLUTION SUPPORTED', 'red')
 print("\n")
 
 
@@ -29,4 +32,4 @@ except EOFError as err:
      print(err)
 
 else:
-     print (colored('\n\nDownload completed successfully !', 'green'))
+     cprint('\n\nDownload completed successfully !', 'green')
