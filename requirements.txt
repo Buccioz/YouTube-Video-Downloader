@@ -1,5 +1,4 @@
-colorama          
-pip               
+colorama                        
 pyfiglet          
 pytube            
 setuptools        
